@@ -16,7 +16,7 @@ const usrId = user?.userId;
 
 
 async function fetchBlog() {
-    const res = await fetch(`http://localhost:3000/blogs/${id}`);
+    const res = await fetch(`https://voiceswithin-node-express.onrender.com/blogs/${id}`);
     const blog = await res.json();
     console.log(blog);
 

@@ -4,7 +4,7 @@ async function signUp() {
     const password = document.getElementById("password").value;
 
     try {
-        const res = await fetch("http://localhost:3000/register", {
+        const res = await fetch("https://voiceswithin-node-express.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -3,7 +3,7 @@ const id = params.get("id");
 
 
 async function fetchData() {
-    const res = await fetch(`http://localhost:3000/blogs/${id}`);
+    const res = await fetch(`https://voiceswithin-node-express.onrender.com/blogs/${id}`);
     const data = await res.json();
 
     console.log(data);
@@ -25,7 +25,7 @@ async function putData() {
     const user = JSON.parse(sessionStorage.getItem("user"));
     const token = user?.token;
 
-    const res = await fetch(`http://localhost:3000/edit-blog/${id}`, {
+    const res = await fetch(`https://voiceswithin-node-express.onrender.com/edit-blog/${id}`, {
         method : "PUT",
         headers : {
             "Content-Type": "application/json",

@@ -23,7 +23,7 @@ const id = user?.userId;
 
 async function fetchBlogs() {
     try {
-        const res = await fetch(`http://localhost:3000/user/blogs/${id}`, {
+        const res = await fetch(`https://voiceswithin-node-express.onrender.com/user/blogs/${id}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -64,7 +64,7 @@ async function fetchBlogs() {
                   deleteIcon.style.color = "red";
                   deleteIcon.addEventListener("click", async () => {
                     try {
-                      const res = await fetch(`http://localhost:3000/delete/${blog._id}`, {
+                      const res = await fetch(`https://voiceswithin-node-express.onrender.com/delete/${blog._id}`, {
                         method: "DELETE",
                         headers: {
                             "Authorization": `Bearer ${user?.token}`

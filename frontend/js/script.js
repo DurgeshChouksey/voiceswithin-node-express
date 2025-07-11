@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
 async function fetchBlogs() {
     const currentUser = JSON.parse(sessionStorage.getItem("user"));
     try {
-        const res = await fetch("http://localhost:3000/blogs");
+        const res = await fetch("https://voiceswithin-node-express.onrender.com/blogs");
         const blogs = await res.json();
 
         // blogs -> title, content, _id, user=username
@@ -57,7 +57,7 @@ async function fetchBlogs() {
                   deleteIcon.style.color = "red"
                   deleteIcon.addEventListener("click", async () => {
                     try {
-                      const res = await fetch(`http://localhost:3000/delete/${blog._id}`, {
+                      const res = await fetch(`https://voiceswithin-node-express.onrender.com/delete/${blog._id}`, {
                         method: "DELETE",
                         headers: {
                             "Authorization": `Bearer ${currentUser?.token}`

@@ -16,7 +16,7 @@ document.getElementById("blogForm").addEventListener("submit", async (e) => {
     const title = document.getElementById("title").value;
     const content = document.getElementById("content").value;
 
-    const res = await fetch(`http://localhost:3000/create-blog/`, {
+    const res = await fetch(`https://voiceswithin-node-express.onrender.com/create-blog/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
