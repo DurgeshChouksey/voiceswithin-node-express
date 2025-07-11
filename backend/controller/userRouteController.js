@@ -15,6 +15,19 @@ const registerUser = asyncHandler(async (req, res, next) => {
         return next(new Error("All fields are required!!"));
     }
 
+    const existingEmail = await User.findOne({ email });
+    const existingUsername = await User.findOne({ username });
+
+    if (existingEmail) {
+        res.status(400);
+        return next(new Error("Email already in use."));
+    }
+
+    if (existingUsername) {
+        res.status(400);
+        return next(new Error("Username already in use."));
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await User.create({username, email, password: hashedPassword});
