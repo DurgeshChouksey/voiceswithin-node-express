@@ -13,6 +13,8 @@ html {
 
 body {
     font-family: "poppins";
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .wrapper {
@@ -83,4 +85,32 @@ a {
 .contentContainer a:hover {
     border: 1px solid black;
     color: black;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    #title {
+        font-size: 3rem;
+    }
+    #content {
+        font-size: 1.6rem;
+    }
+    .contentContainer a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentContainer {
+        padding: 1rem 2rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
 }

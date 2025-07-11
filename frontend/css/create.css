@@ -13,6 +13,8 @@ html {
 
 body {
     font-family: "poppins";
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .wrapper {
@@ -96,4 +98,21 @@ button:hover {
     font-size: 2rem;
     color: green;
     font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    #title {
+        width: 100%;
+    }
+    #content {
+        height: 300px;
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 1.6rem;
+    }
 }

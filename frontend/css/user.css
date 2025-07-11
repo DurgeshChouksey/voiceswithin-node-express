@@ -13,6 +13,8 @@ html {
 
 body {
     font-family: "poppins";
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .wrapper {
@@ -113,4 +115,46 @@ h3 {
 
 #logoutBtn:hover {
     color: black;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    #titleDiv a {
+        font-size: 2.2rem;
+    }
+    #contentDiv {
+        font-size: 1.4rem;
+    }
+    .blogContainer a,
+    #readMore {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    #logoutBtn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #titleDiv a {
+        font-size: 2rem;
+    }
+    .delete-icon {
+        font-size: 1.5rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
