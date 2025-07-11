@@ -1,3 +1,4 @@
+const yup = window.yup;
 async function signUp() {
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
