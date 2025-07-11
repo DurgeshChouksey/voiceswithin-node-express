@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "poppins";
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logo {
+    font-family: "honk";
+    font-size: 3rem;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.blogContainer {
+    padding: 2rem 1.2rem;
+}
+
+.blogContainer li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+    border-bottom: 2px solid black;
+}
+
+#titleDiv {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+#titleDiv a {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+#contentDiv {
+    height: 25px;
+    overflow-y: hidden;
+    font-size: 1.7rem;
+}
+
+.blogContainer a {
+    font-size: 2rem;
+}
+
+#readMore {
+    font-size: 1.5rem;
+    color: #f78e67;
+}
+
+#content {
+    white-space: pre-line;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #f78e67;
+}
+
+#logoutBtn {
+    text-transform: uppercase;
+    width: fit-content;
+    border: none;
+    background-color: white;
+    color: gray;
+    font-size: 2rem;
+}
+
+
+#logoutBtn:hover {
+    color: black;
+}

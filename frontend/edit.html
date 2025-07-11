@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/create.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <a href="./index.html" class="logo">Voices Within</a>
+            <ul>
+                <li><a href="./index.html">BLOGS</a></li>
+            </ul>
+        </nav>
+
+        <form id="blogForm">
+            <input type="text" name="title" id="title" placeholder="Enter title of your blog here...">
+            <br>
+            <textarea name="content" id="content" placeholder="write here..."></textarea>
+            <br>
+            <button type="submit" onclick="putData()">Done!</button>
+        </form>
+
+        <p id="reqRes"></p>
+    </div>
+
+    <script src="./js/edit.js"></script>
+</body>
+</html>
