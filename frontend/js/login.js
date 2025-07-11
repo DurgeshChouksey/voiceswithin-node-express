@@ -2,16 +2,8 @@ async function logIn() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    const schema = yup.object().shape({
-        username: yup.string().required("Username is required"),
-        password: yup.string().required("Password is required")
-    });
-
-    const loginData = { username, password };
-    try {
-        await schema.validate(loginData);
-    } catch (err) {
-        document.getElementById("reqRes").textContent = err.message;
+    if (!username || !password) {
+        document.getElementById("reqRes").textContent = "Both fields are required.";
         document.getElementById("reqRes").style.color = "red";
         return;
     }

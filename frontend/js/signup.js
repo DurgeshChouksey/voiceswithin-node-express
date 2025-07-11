@@ -1,20 +1,17 @@
-const yup = window.yup;
 async function signUp() {
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const schema = yup.object().shape({
-        username: yup.string().required("Username is required").min(3, "Username must be at least 3 characters"),
-        email: yup.string().email("Invalid email format").required("Email is required"),
-        password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required")
-    });
+    if (!username || !email || !password) {
+        document.getElementById("reqRes").textContent = "All fields are required.";
+        document.getElementById("reqRes").style.color = "red";
+        return;
+    }
 
-    const userData = { username, email, password };
-    try {
-        await schema.validate(userData);
-    } catch (err) {
-        document.getElementById("reqRes").textContent = err.message;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById("reqRes").textContent = "Please enter a valid email address.";
         document.getElementById("reqRes").style.color = "red";
         return;
     }
