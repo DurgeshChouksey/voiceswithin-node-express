@@ -1,0 +1,20 @@
+# Exported from Render on 2025-08-18T18:01:59Z
+services:
+- type: web
+  name: voiceswithin-node-express
+  runtime: node
+  repo: https://github.com/DurgeshChouksey/voiceswithin-node-express
+  plan: free
+  envVars:
+  - key: JWT_SECRET
+    sync: false
+  - key: DB_CONNECTION_STRING
+    sync: false
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node server.js
+  autoDeployTrigger: commit
+  rootDir: backend
+version: "1"
